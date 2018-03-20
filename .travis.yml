@@ -9,3 +9,6 @@ env:
     secure: qoXLaxkwbWDDGevQG+3PRou4QhiG69w6d/cqAhZxTzlXKuHTh3T+d2cCCiamlxbVkV0s/ePSHawnJTleoBq4RoUZmL6QaQVVsm7iDstCoLSmkpp8ZstyiFhIldPKPrk9dk/yvRkat5x1CIsGzjhxrMNPi4i5cgYYYJr6nU0vV/wAiHMbQdtuJLDnUAgNa6yyPgVb3cVTetvbIhteeGnnZl//GGvkrGxghtQw+jtdQBkMJ4LsDXaH1jOifN6EZLUz48Ky3os2DQH/9+WI4xsD3rH/aBbT8JN5zIEtZHty0ZNuuz8MQWKyAD1zSoHt+eH9Ryc6kiGWwsO6Cz+moGUoos0Dr/FhkPt2Tm6jX45BOq1Rk6dTZ7x1uMoVZRQ44DdhXMb+WydOMQk0Zc8Fo/vn/7xzgNl4gO/CsRim9Trs/zQkofLTWOZv15IBQ6PmZaOeAhnFGV04+XzV9vn+8dKJEVUAq5MBuFXtwJYgaZ2VWdG78iK5ZIdwa31dfcfC9mzSkqx/BH/GJu/dVV9a5qqTZyFjfHSaNvN6T3/jPkCHH6n5YiTBIDOOPKOOP4ZnogPfhlzZGVDKgp9jJSwpttQMYLR3sPjykFlYqlpuhYIPNNM3npdPtOmS9SmCOqL22xwta/sNgAONjgmDszMepRG3wNYxVWu5CxkfoqYy4PCYBtg=
 before_install:
   - openssl aes-256-cbc -k "$super_secret_password" -in SE234.pem.enc -out SE234.pem -d
+ addons:
+    ssh_known_hosts:
+       - 54.190.58.247
