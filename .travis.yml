@@ -6,10 +6,10 @@ install: true
 before_script:
 - export DUCKER_HOST="$HOST_NAME"
 script:
-- docker build -t dtp80/htmltest .
-- docker push dtp80/htmltest
+- docker build -t 444768367/se234hardlab .
+- docker push 444768367/se234hardlab
 after_success:
-- docker run -p 8088:88 -d dto80/htmltest:latest
+- docker run -p 8088:88 -d 444768367/se234hardlab:latest
 service: docker
 env:
   global:
