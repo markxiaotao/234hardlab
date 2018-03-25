@@ -9,7 +9,7 @@ script:
 - docker build -t 444768367/se234hardlab .
 - docker push 444768367/se234hardlab
 after_success:
-- docker run -p 8088:88 -d 444768367/se234hardlab:latest
+- docker run -p 8088:80 -d 444768367/se234hardlab:latest
 service: docker
 env:
   global:
