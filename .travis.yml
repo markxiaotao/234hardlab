@@ -11,7 +11,7 @@ script:
 after_success:
 - docker stop se234hardlab
 - docker rm se234hardlab
-- docker run -p 8088:80 -d --name se234hardlab $DOCKER_USERNAME/se234hardlab:latest
+- docker run -p 8888:80 -d --name se234hardlab $DOCKER_USERNAME/se234hardlab:latest
 service: docker
 env:
   global:
