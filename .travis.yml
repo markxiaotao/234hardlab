@@ -6,10 +6,10 @@ install: true
 before_script:
 - export DOCKER_HOST="$HOST_NAME"
 script:
-- docker build -t 444768367/se234hardlab .
-- docker push 444768367/se234hardlab
+- docker build -t $DOCKER_USERNAME/se234hardlab .
+- docker push $DOCKER_USERNAME/se234hardlab
 after_success:
 - docker stop se234hardlab
 - docker rm se234hardlab
-- docker run -p 8088:80 -d --name se234hardlab 444768367/se234hardlab:latest
+- docker run -p 8088:80 -d --name se234hardlab $DOCKER_USERNAME/se234hardlab:latest
 service: docker
